@@ -6,7 +6,8 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
 import config from './config';
-import stockItemsRoutes from './routes/stockItems';
+import productsRoutes from './routes/products';
+import dashboardRoutes from './routes/dashboard';
 
 const app: Express = express();
 const port = config.port;
@@ -20,7 +21,8 @@ mongoose
 	.then(() => console.log('MongoDb connected!'))
 	.catch((err) => console.log(err));
 
-app.use('/api/stockItems', stockItemsRoutes);
+app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/products', productsRoutes);
 
 app.get('/', (req: Request, res: Response) => {
 	res.send('Express + TypeScript Server');

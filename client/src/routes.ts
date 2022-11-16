@@ -1,6 +1,6 @@
 import DashboardLayout from './layouts/DashboardLayout.svelte';
 import Home from './views/dashboard/Home.svelte';
-import StockItems from './views/dashboard/StockItems.svelte';
+import Products from './views/dashboard/Products.svelte';
 
 const routes = [
 	{
@@ -9,9 +9,9 @@ const routes = [
 		component: Home,
 	},
 	{
-		name: '/stock-items',
+		name: '/products',
 		layout: DashboardLayout,
-		component: StockItems,
+		component: Products,
 	},
 ];
 
